@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
         const items = [];
         let matchedContent;
         while ((matchedContent = Regex.exec(htmlDocument)) !== null) {
-          const link = matchedContent[1];
+          const link = "https://time.com"+matchedContent[1];
           const title = matchedContent[2];
           //console.log(matchedContent[0]);
           items.push({ title, link });
